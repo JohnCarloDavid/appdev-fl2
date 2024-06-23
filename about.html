@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Top 10 Vloggers in the Philippines</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold mb-6 text-white">About</h1>
+    
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <svg class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <svg class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+    
+            <!-- Desktop Menu -->
+            <ul id="desktop-menu" class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                <li><a href="dashboard.html" class="text-gray-300 hover:text-white">Dashboard</a></li>
+                <li><a href="about.html" class="text-gray-300 hover:text-white">About</a></li>
+                <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                <li><a href="faq.html" class="text-gray-300 hover:text-white">FAQ</a></li>
+            </ul>
+    
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="md:hidden fixed top-0 left-0 right-0 bottom-0 bg-gray-800 text-white z-50 flex flex-col items-center justify-center hidden" hidden>
+                <li><a href="index.html" class="block py-2 text-center">Home</a></li>
+                <li><a href="dashboard.html" class="block py-2 text-center">Dashboard</a></li>
+                <li><a href="about.html" class="block py-2 text-center">About</a></li>
+                <li><a href="contact.html" class="block py-2 text-center">Contact</a></li>
+                <li><a href="faq.html" class="block py-2 text-center">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <div class="container mx-auto p-6">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+            <p class="text-gray-700 mb-4">
+                Welcome to Top Vloggers PH, your go-to source for discovering the most popular and influential vloggers in the Philippines. Our mission is to showcase the diverse and vibrant community of Filipino content creators who are making a significant impact in the digital world
+            </p>
+            
+            <h2 class="text-2xl font-bold mb-4">Who We Are</h2>
+            <p class="text-gray-700 mb-4">
+                Top Vloggers PH is a dedicated team of digital enthusiasts and content curators passionate about the world of vlogging. We meticulously research and analyze the trends, popularity, and impact of vloggers in the Philippines to bring you a curated list of the top influencers. Our goal is to provide you with an insightful and enjoyable experience as you explore the fascinating world of Filipino vloggers.
+            </p>
+            
+            <h2 class="text-2xl font-bold mb-4">What We Offer</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-4">
+                <li>In-depth profiles of the top 10 vloggers in the Philippines, highlighting their journey, content, and achievements.</li>
+                <li>Categories of vloggers to help you discover new and exciting content in areas such as lifestyle, gaming, beauty, education, and more.</li>
+                <li>Regular updates and news on the latest trends and developments in the vlogging community.</li>
+                <li>Engaging blog posts and articles that offer insights, tips, and stories from the world of vlogging.</li>
+                <li>A user-friendly search feature to help you find specific vloggers or content quickly and easily.</li>
+            </ul>
+            
+            <h2 class="text-2xl font-bold mb-4">Why Vlogging?</h2>
+            <p class="text-gray-700 mb-4">
+                Vlogging has become a powerful medium for personal expression, entertainment, and education. It allows individuals to share their stories, passions, and expertise with a global audience. In the Philippines, the vlogging community has grown tremendously, with many vloggers gaining millions of followers and making a substantial impact on both local and international audiences. Through Top Vloggers PH, we aim to shine a spotlight on these talented individuals and their contributions to the digital landscape.
+            </p>
+            
+            <h2 class="text-2xl font-bold mb-4">Join Us</h2>
+            <p class="text-gray-700 mb-4">
+                Whether you are a fan of vlogging, a content creator, or simply curious about the top influencers in the Philippines, we invite you to join us on this exciting journey. Explore our site, discover amazing content, and stay updated with the latest from the world of Filipino vloggers. Thank you for being a part of the Top Vloggers PH community!
+            </p>
+            
+            <p class="text-gray-700">
+                For any inquiries or suggestions, feel free to <a href="contact.html" class="text-indigo-600 hover:underline">contact us</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

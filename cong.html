@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cong TV Official</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gray-800 text-white p-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl">Cong TV Official</h1>
+            <button id="burger-menu" class="md:hidden" aria-expanded="false">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 18h18v-2H3v2zM3 5v2h18V5H3zm0 7h18v-2H3v2z" clip-rule="evenodd" />
+                </svg>
+                <svg class="w-6 h-6 text-white hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M6 18L18 6M6 6l12 12" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+        <nav id="nav-menu" class="hidden md:flex justify-center mt-4">
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8">
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#bio" class="hover:text-gray-300">Biography</a></li>
+                <li><a href="#achievements" class="hover:text-gray-300">Achievements</a></li>
+                <li><a href="#social-media" class="hover:text-gray-300">Media</a></li>
+                <li><a href="#latest-videos" class="hover:text-gray-300">Videos</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenu = document.getElementById('burger-menu');
+            const navMenu = document.getElementById('nav-menu');
+    
+            burgerMenu.addEventListener('click', function () {
+                const expanded = burgerMenu.getAttribute('aria-expanded') === 'true';
+                burgerMenu.setAttribute('aria-expanded', !expanded);
+                navMenu.classList.toggle('hidden');
+                navMenu.classList.toggle('flex');
+                
+                // Toggle icons
+                burgerMenu.querySelectorAll('svg').forEach(icon => icon.classList.toggle('hidden'));
+            });
+
+            function adjustTable() {
+                const table = document.querySelector('table');
+                const tableWrapper = document.querySelector('.overflow-x-auto');
+                if (table && tableWrapper) {
+                    const tableWidth = table.clientWidth;
+                    const wrapperWidth = tableWrapper.clientWidth;
+
+                    if (tableWidth > wrapperWidth) {
+                        tableWrapper.style.overflowX = 'scroll';
+                    } else {
+                        tableWrapper.style.overflowX = 'hidden';
+                    }
+                }
+            }
+
+            window.addEventListener('resize', adjustTable);
+            adjustTable();
+        });
+    </script>
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+
+        <!-- Profile Header -->
+        <section id="profile-header" class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpGae1ZH5-lnR5cHY17XTO2Gto79prrQbhoQ&s" alt="Cong TV" class="rounded-full w-32 h-32 mb-4 md:mb-0 md:mr-6">
+            <div>
+                <h2 class="text-2xl font-semibold">Cong TV</h2>
+                <p class="mt-2 text-gray-600">Content Creator and Vlogger</p>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section id="bio" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Biography</h3>
+            <p>Cong TV is a Filipino content creator known for his entertaining vlogs and comedic videos on YouTube. He has gained a massive following for his unique style and humorous content.</p>
+            <p class="mt-4">Cong's videos often feature his daily life adventures, challenges, and collaborations with other creators.</p>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Achievements</h3>
+            <ul class="list-disc list-inside">
+                <li><strong>Subscribers:</strong> Over 10 million subscribers on YouTube.</li>
+                <li><strong>Content:</strong> Known for viral videos and engaging storytelling.</li>
+                <li><strong>Impact:</strong> Influential figure in the Filipino YouTube community.</li>
+            </ul>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social-media" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Follow Cong TV</h3>
+            <div class="flex flex-wrap justify-center md:justify-start space-x-4">
+                <a href="https://www.youtube.com/@CongTheVlogger" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://www.tiktok.com/@congtv?lang=en" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://www.instagram.com/congTV.Official/?hl=en" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/iamCongTV/" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Latest Videos Section -->
+        <section id="latest-videos" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Latest Videos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="video-item">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/_YiEc40OcAQ?si=ZWmz6l4EE5uj4x-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2">Video 1</p>
+                </div>
+                <div class="video-item">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-full" src="//www.youtube.com/embed/5tCsefjyqrg?si=Mq_G2qCgGdiQ7F3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2">Video 2</p>
+                </div>
+                <div class="video-item">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/8KXHmAzdAeQ?si=3mppJboi8HDw8UO2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2">Video 3</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+        <p>&copy; 2024 Cong TV. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Willie Ong Official</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gray-800 text-white p-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl">Doc Willie Ong</h1>
+            <button id="burger-menu" class="md:hidden" aria-expanded="false">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 18h18v-2H3v2zM3 5v2h18V5H3zm0 7h18v-2H3v2z" clip-rule="evenodd" />
+                </svg>
+                <svg class="w-6 h-6 text-white hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M6 18L18 6M6 6l12 12" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+        <nav id="nav-menu" class="hidden md:flex justify-center mt-4">
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8">
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#bio" class="hover:text-gray-300">Biography</a></li>
+                <li><a href="#services" class="hover:text-gray-300">Services</a></li>
+                <li><a href="#social-media" class="hover:text-gray-300">Media</a></li>
+                <li><a href="#health-tips" class="hover:text-gray-300">health-tips</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenu = document.getElementById('burger-menu');
+            const navMenu = document.getElementById('nav-menu');
+    
+            burgerMenu.addEventListener('click', function () {
+                const expanded = burgerMenu.getAttribute('aria-expanded') === 'true';
+                burgerMenu.setAttribute('aria-expanded', !expanded);
+                navMenu.classList.toggle('hidden');
+                navMenu.classList.toggle('flex');
+                
+                // Toggle icons
+                burgerMenu.querySelectorAll('svg').forEach(icon => icon.classList.toggle('hidden'));
+            });
+
+            function adjustTable() {
+                const table = document.querySelector('table');
+                const tableWrapper = document.querySelector('.overflow-x-auto');
+                if (table && tableWrapper) {
+                    const tableWidth = table.clientWidth;
+                    const wrapperWidth = tableWrapper.clientWidth;
+
+                    if (tableWidth > wrapperWidth) {
+                        tableWrapper.style.overflowX = 'scroll';
+                    } else {
+                        tableWrapper.style.overflowX = 'hidden';
+                    }
+                }
+            }
+
+            window.addEventListener('resize', adjustTable);
+            adjustTable();
+        });
+    </script>
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+
+        <!-- Profile Header -->
+        <section id="profile-header" class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center">
+            <img src="https://lh5.googleusercontent.com/proxy/WCoT4MdPCNlatZwj729846-0W39k5GZr77UcjmCFFDFMNagYm8FeTu5K7nTNcLviLYJRpiargHBIyWYZjzrfRgycs5uMYAF0Qcb5Awpo_ET4YA" alt="Doc Willie Ong" class="rounded-full w-32 h-32 mb-4 md:mb-0 md:mr-6">
+            <div>
+                <h2 class="text-2xl font-semibold">Doc Willie Ong</h2>
+                <p class="mt-2 text-gray-600">Physician, Health Advocate, and Author</p>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section id="bio" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Biography</h3>
+            <p>Dr. Willie Ong is a renowned Filipino physician known for his dedication to public health education. Through his online platforms, he shares valuable medical advice, tips for a healthier lifestyle, and practical healthcare insights.</p>
+            <p class="mt-4">Dr. Ong's mission is to empower people with knowledge that can improve their overall well-being and promote a healthier society.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Services</h3>
+            <ul class="list-disc list-inside">
+                <li><strong>Health Consultation:</strong> Online consultations for medical inquiries.</li>
+                <li><strong>Public Speaking:</strong> Talks and seminars on various health topics.</li>
+                <li><strong>Authorship:</strong> Books and publications on health and wellness.</li>
+            </ul>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social-media" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Follow Doc Willie Ong</h3>
+            <div class="flex flex-wrap justify-center md:justify-start space-x-4">
+                <a href="https://www.youtube.com/@DocWillieOng" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://www.facebook.com/DocWillieOngOfficial/" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://twitter.com/DocWillieOng" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://www.instagram.com/dochaywillie/" class="text-blue-600 hover:underline flex items-center space-x-2 mb-2 md:mb-0">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Health Tips Section -->
+        <section id="health-tips" class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h3 class="text-xl font-semibold mb-4">Health Tips</h3>
+            <p>Get valuable health tips and advice directly from Dr. Willie Ong to help you live a healthier life:</p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Importance of regular exercise and a balanced diet.</li>
+                <li>Common health myths debunked.</li>
+                <li>Tips for managing stress and mental well-being.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+        <p>&copy; 2024 Doc Willie Ong. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

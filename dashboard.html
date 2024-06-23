@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Vloggers in the Philippines</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold mb-6 text-white">Dashboard</h1>
+    
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <svg class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <svg class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+    
+            <!-- Desktop Menu -->
+            <ul id="desktop-menu" class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                <li><a href="dashboard.html" class="text-gray-300 hover:text-white">Dashboard</a></li>
+                <li><a href="about.html" class="text-gray-300 hover:text-white">About</a></li>
+                <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                <li><a href="faq.html" class="text-gray-300 hover:text-white">FAQ</a></li>
+            </ul>
+    
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="md:hidden fixed top-0 left-0 right-0 bottom-0 bg-gray-800 text-white z-50 flex flex-col items-center justify-center hidden" hidden>
+                <li><a href="index.html" class="block py-2 text-center">Home</a></li>
+                <li><a href="dashboard.html" class="block py-2 text-center">Dashboard</a></li>
+                <li><a href="about.html" class="block py-2 text-center">About</a></li>
+                <li><a href="contact.html" class="block py-2 text-center">Contact</a></li>
+                <li><a href="faq.html" class="block py-2 text-center">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+    
+    <div class="container mx-auto p-6">
+        <div class="relative mb-4">
+            <input id="search-input" type="text" placeholder="Search..." class="bg-gray-700 text-white placeholder-gray-400 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent w-full">
+            <button id="search-button" type="button" class="absolute inset-y-0 right-0 flex items-center px-4 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2M11 15.5A4.5 4.5 0 1111 6a4.5 4.5 0 010 9z" />
+                </svg>
+            </button>
+        </div>
+        <div id="dashboard" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Vloggers will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            const dashboard = document.getElementById('dashboard');
+
+            const vloggers = [
+                {
+                    name: 'Raffy Tulfo in Action',
+                    subscribers: '27.3M',
+                    image: 'https://i.ytimg.com/vi/8BZGLPuPVrg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLApHuGlI9btyqEv6JgXohJub8kkjg',
+                    description: 'Social justice campaigning and hard-hitting investigative journalism.'
+                },
+                {
+                    name: 'Ivana Alawi',
+                    subscribers: '15.7M',
+                    image: 'https://www.rappler.com/tachyon/2021/12/ivana-alawi-rankings-2.png',
+                    description: 'Lifestyle, beauty, and prank videos.'
+                },
+                {
+                    name: 'Niana Guerrero',
+                    subscribers: '15.6M',
+                    image: 'https://images.gmanews.tv/webpics/2022/01/272108966_486150423139984_1088450289070281926_n_2022_01_28_14_54_44.jpg',
+                    description: 'Dance videos, vlogs, and collaborations.'
+                },
+                {
+                    name: 'Ranz Kyle',
+                    subscribers: '15.2M',
+                    image: 'https://miro.medium.com/v2/resize:fit:640/1*fp6UUvzPiFmsZPPNHJW_eQ.jpeg',
+                    description: 'Dance covers, pranks, and vlogs.'
+                },
+                {
+                    name: 'Alex Gonzaga Official',
+                    subscribers: '13.5M',
+                    image: 'https://images.summitmedia-digital.com/cosmo/images/2019/07/31/alex-gonzaga-vlog-four-million-subscribers-1564536721.jpg',
+                    description: 'Comedy, vlogs, and beauty content.'
+                },
+                {
+                    name: 'Cong TV',
+                    subscribers: '11.7M',
+                    image: 'https://i.ytimg.com/vi/fAwmtSmIRwU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA5aUWGvA2D4Orl5J6Xex32Inw16g',
+                    description: 'Comedy skits and gaming content.'
+                },
+                {
+                    name: 'Doc Willie Ong',
+                    subscribers: '9.18M',
+                    image: 'https://viberatecdn.blob.core.windows.net/entity/artist/doc-willie-ong-59L0H',
+                    description: 'Medical advice and health tips.'
+                },
+                {
+                    name: 'Vice Ganda',
+                    subscribers: '7.96M',
+                    image: 'https://media.philstar.com/photos/2020/12/26/vice-ganda_2020-12-26_10-38-17.jpg',
+                    description: 'Comedy, vlogs, and showbiz updates.'
+                },
+                {
+                    name: 'Toni Gonzaga',
+                    subscribers: '7M',
+                    image: 'https://media.interaksyon.com/wp-content/uploads/2022/03/Toni-Gonzaga.jpg',
+                    description: 'Interviews with celebrities and public figures, lifestyle content.'
+                },
+                {
+                    name: 'ChooxTV',
+                    subscribers: '6.55M',
+                    image: 'https://aphrodite.gmanetwork.com/entertainment/articles/900_675_19__20200707153703.jpg',
+                    description: 'Gaming content and live streams.'
+                }
+            ];
+
+            function displayVloggers(vloggers) {
+                dashboard.innerHTML = '';
+                vloggers.forEach(vlogger => {
+                    const vloggerCard = `
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <img class="w-full h-48 object-cover rounded-md" src="${vlogger.image}" alt="${vlogger.name}">
+                            <h2 class="text-xl font-bold mt-4">${vlogger.name}</h2>
+                            <p class="text-gray-700 mt-2">${vlogger.subscribers} subscribers</p>
+                            <p class="text-gray-600 mt-2">${vlogger.description}</p>
+                        </div>
+                    `;
+                    dashboard.innerHTML += vloggerCard;
+                });
+            }
+
+            function handleSearch() {
+                const query = searchInput.value.toLowerCase();
+                const filteredVloggers = vloggers.filter(vlogger => vlogger.name.toLowerCase().includes(query));
+                displayVloggers(filteredVloggers);
+            }
+
+            searchButton.addEventListener('click', handleSearch);
+            searchInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    handleSearch();
+                }
+            });
+
+            displayVloggers(vloggers);
+        });
+    </script>
+</body>
+</html>
